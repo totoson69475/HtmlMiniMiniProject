@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 수강 신청</title>
+    <link rel = "stylesheet" href="../../css/studentCss.css">
+    <script src = "../../JS/studentJS.js"></script>
+</head>
+<body>
+    <div id = "wrap">
+        <form> 
+            <!-- 검색 조건 분기 -->
+            <select name = "Lecture">
+                <option value = "none">전공/교양</option>
+                <option value = "major">전공</option>
+                <option value = "refinement">교양</option>
+            </select>
+            <select name = "grade">
+            <option value = "none">학년 선택</option>
+                <option value = "1st">1</option>
+                <option value = "2nd">2</option>
+                <option value = "3rd">3</option>
+                <option value = "4th">4</option>
+            </select>
+            <select name = "major">
+                <option value = "none">학과/학부</option>
+                <option value = "computer">컴퓨터소프트웨어학과</option>
+                <option value = "philosophy">철학과</option>
+                <option value = "premedical">의예과</option>
+            </select>
+            <select name = "time">
+                <option value = "none">주간/야간</option>
+                <option value = "day">주간</option>
+                <option value = "night">야간</option>
+            </select>
+            <br><br>
+            <!-- 검색 -->
+            <input type = "search" placeholder="교과목명 입력" class = "inputSearch">
+            <input type = "submit" value = "검색" class = "buttonSearch">
+        </form>
+        <br>
+        <table border = "1px">
+            <thead>
+                <tr>
+                    <td style="width: 50px">No</td>
+                    <td style="width: 70px">주야</td>
+                    <td style="width: 50px">학년</td>
+                    <td style="width: 250px;">교과목명</td>
+                    <td>이수 구분</td>
+                    <td style="width: 50px">학점</td>
+                    <td>담당 교수</td>
+                    <td>강의 시간</td>
+                    <td style="width: 150px">강의실</td>
+                    <td style="width: 80px">인원제한</td>
+                    <td style="width: 80px">수강인원</td>
+                    <td style="width: 50px">신청</td>
+                </tr>
+            </thead>
+            <tr>
+                <td style="width: 50px" id = "no">1</td>
+                <td style="width: 70px">주간</td>
+                <td style="width: 50px">3</td>
+                <td style="width: 250px;" id = "lectureName">Java 웹 프로그래밍</td>
+                <td>전필</td>
+                <td style="width: 50px">3</td>
+                <td>유응구</td>
+                <td>화345</td>
+                <td style="width: 150px">인302</td>
+                <td style="width: 80px">30</td>
+                <td style="width: 80px">2</td>
+                <td style="width: 50px">
+                    <button type = "button" onclick="apply(event)">신청</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50px" id = "no">2</td>
+                <td style="width: 70px">주간</td>
+                <td style="width: 50px">3</td>
+                <td style="width: 250px;" id = "lectureName">모바일 게임 개발</td>
+                <td>전필</td>
+                <td style="width: 50px">3</td>
+                <td>고수정</td>
+                <td>수345</td>
+                <td style="width: 150px">인301</td>
+                <td style="width: 80px">30</td>
+                <td style="width: 80px">1</td>
+                <td style="width: 50px">
+                    <button type = "button" onclick="apply(event)">신청</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body> 
+</html>
